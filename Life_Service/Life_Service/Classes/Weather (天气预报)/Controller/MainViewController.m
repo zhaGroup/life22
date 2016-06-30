@@ -11,7 +11,7 @@
 #import "todayWeather.h"
 #import "FutherViewController.h"
 #import "CityListViewController.h"
-@interface MainViewController ()
+@interface MainViewController ()<cityDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
 
@@ -36,28 +36,50 @@
     [super viewDidLoad];
     
     
+    
+    
+   
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
     UIBarButtonItem *cityItem=[[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStylePlain  target:self action:@selector(chooseCity)];
     
     self.navigationItem.rightBarButtonItem=cityItem;
     
-        [netManager getTodayWeatherWithCityName:self.cityLabel.text andBlcok:^(id obj) {
-            todayWeather *t=obj;
-                self.weatherLabel.text=t.weather;
-                self.temperatureLable.text=t.temperature;
-                self.dateLable.text=t.date_y;
-                self.windLable.text=t.wind;
-                self.weekLabel.text=t.week;
-            self.adviceTextV.text=t.dressing_advice;
-        }];
+    
+    
+    [netManager getTodayWeatherWithCityName:self.cityLabel.text andBlcok:^(id obj) {
+        todayWeather *t=obj;
+        self.weatherLabel.text=t.weather;
+        self.temperatureLable.text=t.temperature;
+        self.dateLable.text=t.date_y;
+        self.windLable.text=t.wind;
+        self.weekLabel.text=t.week;
+        self.adviceTextV.text=t.dressing_advice;
+    }];
 }
+
+
+
+
 
 //选择城市
 -(void)chooseCity
 {
     CityListViewController *city=[[CityListViewController alloc]init];
     
-    [self.navigationController presentViewController:city animated:YES completion:nil];
+    city.delegate=self;
     
+    [self  presentViewController:city animated:YES completion:nil];
+    
+}
+
+-(void)toChooseCity:(NSString *)cityName
+{
+    self.cityLabel.text=cityName;
 }
 - (IBAction)getFutureWeather:(UIButton *)sender
 {
@@ -65,14 +87,12 @@
     
     futher.title=self.cityLabel.text;
     
+    
+    
     [self.navigationController pushViewController:futher animated:YES];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    
-}
+
 
 
 @end

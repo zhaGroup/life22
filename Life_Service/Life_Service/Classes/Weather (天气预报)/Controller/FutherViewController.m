@@ -32,7 +32,7 @@
     
     UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.bounds];
     
-    imageV.image=[UIImage imageNamed:@"bg_night_rain.jpg"];
+    imageV.image=[UIImage imageNamed:@"bg_na.jpg"];
     
     [self.view addSubview:imageV];
     

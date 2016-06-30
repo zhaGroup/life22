@@ -50,12 +50,19 @@
         NSDictionary *future=DataDic[@"result"][@"future"];
         NSMutableArray *mutableArray=[NSMutableArray array];
         
+        
+        //得到乱序的时间 所有对象的Key
         NSArray *array =[future allKeys];
+      
+        //排序 对时间
+       NSArray *cityNewKey= [ array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+           return [(NSString*) obj1 compare:(NSString*)obj2];
+        }];
         
        
-        for (int i=0; i<array.count; i++)
+        for (int i=0; i<cityNewKey.count; i++)
         {
-        NSString *key=array[i];
+        NSString *key=cityNewKey[i];
         NSDictionary *dic=future[key];
         futherWeather   *t=[[futherWeather alloc]initWithDic:dic];
         [mutableArray addObject:t];
@@ -82,27 +89,21 @@
         NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         
         NSArray *cityArray=DataDic[@"result"];
-        
-        
+    
         NSMutableArray *mutableArray=[NSMutableArray array];
         
-       
         for (int i=0; i<cityArray.count; i++)
         {
             NSDictionary *cityDic=cityArray[i];
             WeatherCity *city=[[WeatherCity alloc]initWithDic:cityDic];
             [mutableArray addObject:city];
         }
-        
-        
         block(mutableArray);
-        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         NSLog(@"%@",error);
     }];
 }
-
 
 @end

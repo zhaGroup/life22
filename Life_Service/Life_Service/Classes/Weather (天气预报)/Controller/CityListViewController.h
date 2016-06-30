@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol cityDelegate <NSObject>
+
+-(void)toChooseCity:(NSString *)cityName;
+
+@end
+
+
 @interface CityListViewController : UIViewController
 
+
+@property(nonatomic)id<cityDelegate>delegate;
 @end

@@ -26,8 +26,21 @@
     self.temperatureLabel.text=_futher.temperature;
     self.weekLabel.text=_futher.week;
     self.weatherLabel.text=_futher.weather;
-    self.dateLabel.text=_futher.date;
+    NSString *newDate=[self getGoodString:_futher.date];
+    self.dateLabel.text=newDate;
     self.windLabel.text=_futher.wind;
     
 }
+
+-(NSString*)getGoodString:(NSString*)oldDate
+{
+    NSString *year=[oldDate substringToIndex:4];
+    
+    NSString *month=[oldDate substringWithRange:NSMakeRange(4, 2)];
+    NSString *day=[oldDate substringFromIndex:6];
+    
+    NSString *new=[NSString stringWithFormat:@"%@年%@月%@日",year,month,day];
+    return new;
+}
+
 @end

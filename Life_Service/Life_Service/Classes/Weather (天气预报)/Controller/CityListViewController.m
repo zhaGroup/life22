@@ -20,16 +20,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    
+    
+    
+    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    self.tableView=[[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
     
-    UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.bounds];
+    UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.frame];
     
     imageV.image=[UIImage imageNamed:@"bg_night_rain.jpg"];
     
     [self.view addSubview:imageV];
+    
     
     
     self.tableView.backgroundColor=[UIColor clearColor];
@@ -43,10 +54,9 @@
     
     
     [self.view addSubview:self.tableView];
-    
-    
-    // Do any additional setup after loading the view from its nib.
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -54,12 +64,7 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    
-    
-}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
@@ -80,9 +85,20 @@
     cell.detailTextLabel.text=city.city;
     
     cell.backgroundColor=[UIColor clearColor];
-    NSLog(@"%@",city.city);
     
     return cell;
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WeatherCity *city=self.cityArray[indexPath.row];
+    
+    NSString *cityName=city.district;
+    
+    [self.delegate toChooseCity:cityName];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
