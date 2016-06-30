@@ -45,6 +45,7 @@
     [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        
         NSDictionary *future=DataDic[@"result"][@"future"];
         NSMutableArray *mutableArray=[NSMutableArray array];
         
@@ -53,9 +54,9 @@
        
         for (int i=0; i<array.count; i++)
         {
-            NSString *key=array[i];
-            NSDictionary *dic=DataDic[key];
-          futherWeather   *t=[[futherWeather alloc]initWithDic:dic];
+        NSString *key=array[i];
+        NSDictionary *dic=future[key];
+        futherWeather   *t=[[futherWeather alloc]initWithDic:dic];
         [mutableArray addObject:t];
         }
         block(mutableArray);

@@ -1,47 +1,33 @@
 //
-//  futureCell.m
-//  天气预报
+//  FutureCell.m
+//  Life_Service
 //
-//  Created by tarena on 16/6/29.
+//  Created by tarena on 16/6/30.
 //  Copyright © 2016年 tarena. All rights reserved.
 //
 
-#import "futureCell.h"
+#import "FutureCell.h"
 
-@implementation futureCell
+@implementation FutureCell
 
-- (void)awakeFromNib
-{
-    
+- (void)awakeFromNib {
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-   
+    // Configure the view for the selected state
 }
 
-//-(void)setFuture:(futherWeather *)future
-//{
-//    _future=future;
-//    self.weatherLabel.text=future.weather;
-//    
-//    self.temperatureLabel.text=future.temperature;
-//    
-//    self.windLabel.text=future.wind;
-//    self.weekLabel.text=future.week;
-//    
-//    self.dateLabel.text=_future.date;
-//    
-//    
-//    
-////    @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
-////    
-////    @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
-////    @property (weak, nonatomic) IBOutlet UILabel *windLabel;
-////    
-////    @property (weak, nonatomic) IBOutlet UILabel *weekLabel;
-////    
-////    @property (weak, nonatomic) IBOutlet UILabel *dateLabel
-//}
+-(void)setFuther:(futherWeather *)futher
+{
+    _futher=futher;
+    self.temperatureLabel.text=_futher.temperature;
+    self.weekLabel.text=_futher.week;
+    self.weatherLabel.text=_futher.weather;
+    self.dateLabel.text=_futher.date;
+    self.windLabel.text=_futher.wind;
+    
+}
 @end

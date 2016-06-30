@@ -8,7 +8,7 @@
 
 #import "FutherViewController.h"
 #import "netManager.h"
-#import "futureCell.h"
+#import "FutureCell.h"
 
 @interface FutherViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)NSArray *weatherArray;
@@ -39,7 +39,7 @@
         [self.tableView reloadData];
     }];
     
-      [self.tableView registerNib:[UINib nibWithNibName:@"futureCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+      [self.tableView registerNib:[UINib nibWithNibName:@"FutureCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
 
     
@@ -66,21 +66,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    futureCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    FutureCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-//    cell.future=self.weatherArray[indexPath.row];
+    cell.futher=self.weatherArray[indexPath.row];
     
-//    futherWeather *future=self.weatherArray[indexPath.row];
-//    
-//    NSLog(@"%@",future);
-//    cell.weatherLabel.text=future.weather;
-//    
-//    cell.temperatureLabel.text=future.temperature;
-//    
-//    cell.windLabel.text=future.wind;
-//    cell.weekLabel.text=future.week;
-//    
-////    cell.dateLabel.text=future.date;
+
     return cell;
 }
 
