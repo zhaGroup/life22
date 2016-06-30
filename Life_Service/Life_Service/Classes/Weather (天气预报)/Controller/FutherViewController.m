@@ -30,6 +30,15 @@
     self.tableView.delegate=self;
     
     
+    UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.bounds];
+    
+    imageV.image=[UIImage imageNamed:@"bg_night_rain.jpg"];
+    
+    [self.view addSubview:imageV];
+    
+    
+    self.tableView.backgroundColor=[UIColor clearColor];
+    
     [netManager getFutherWeatherWithCityName:self.title andBlcok:^(id obj) {
         //
         self.weatherArray=obj;
@@ -70,7 +79,7 @@
     
     cell.futher=self.weatherArray[indexPath.row];
     
-
+    cell.backgroundColor=[UIColor clearColor];
     return cell;
 }
 

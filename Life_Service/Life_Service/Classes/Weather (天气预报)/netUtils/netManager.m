@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "todayWeather.h"
 #import "futherWeather.h"
+#import "WeatherCity.h"
 @implementation netManager
 
 //得到今天的天气
@@ -69,7 +70,39 @@
 }
 
 
-
++(void)getCityWithBlock:(MycallBack)block
+{
+    NSString *path=@"http://v.juhe.cn/weather/citys";
+    NSDictionary *params=@{@"key":chenKey };
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+    [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        
+        NSArray *cityArray=DataDic[@"result"];
+        
+        
+        NSMutableArray *mutableArray=[NSMutableArray array];
+        
+       
+        for (int i=0; i<cityArray.count; i++)
+        {
+            NSDictionary *cityDic=cityArray[i];
+            WeatherCity *city=[[WeatherCity alloc]initWithDic:cityDic];
+            [mutableArray addObject:city];
+        }
+        
+        
+        block(mutableArray);
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+    }];
+}
 
 
 @end
