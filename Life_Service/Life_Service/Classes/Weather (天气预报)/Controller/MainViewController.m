@@ -10,6 +10,7 @@
 #import "netManager.h"
 #import "todayWeather.h"
 #import "FutherViewController.h"
+#import "CityListViewController.h"
 @interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
@@ -33,6 +34,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIBarButtonItem *cityItem=[[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStylePlain  target:self action:@selector(chooseCity)];
+    
+    self.navigationItem.rightBarButtonItem=cityItem;
+    
         [netManager getTodayWeatherWithCityName:self.cityLabel.text andBlcok:^(id obj) {
             todayWeather *t=obj;
                 self.weatherLabel.text=t.weather;
@@ -44,6 +51,14 @@
         }];
 }
 
+//选择城市
+-(void)chooseCity
+{
+    CityListViewController *city=[[CityListViewController alloc]init];
+    
+    [self.navigationController presentViewController:city animated:YES completion:nil];
+    
+}
 - (IBAction)getFutureWeather:(UIButton *)sender
 {
     FutherViewController *futher=[[FutherViewController alloc]init];

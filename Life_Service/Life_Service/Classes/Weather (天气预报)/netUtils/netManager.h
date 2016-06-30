@@ -19,4 +19,6 @@ typedef void (^MycallBack)(id obj);
 //得到明天的天气
 +(void)getFutherWeatherWithCityName:(NSString *)cityName andBlcok:(MycallBack)block;
 
+//得到所有城市
++(void)getCityWithBlock:(MycallBack)block;
 @end

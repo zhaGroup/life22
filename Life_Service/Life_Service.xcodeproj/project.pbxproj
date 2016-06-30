@@ -71,6 +71,9 @@
 		853853521D25048D003872AA /* blueBtnSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 853853401D25048D003872AA /* blueBtnSmall.png */; };
 		8538535D1D2527F4003872AA /* FutureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538535B1D2527F4003872AA /* FutureCell.m */; };
 		8538535E1D2527F4003872AA /* FutureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8538535C1D2527F4003872AA /* FutureCell.xib */; };
+		85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED281D254B2500BA6CEC /* CityListViewController.m */; };
+		85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F0ED291D254B2500BA6CEC /* CityListViewController.xib */; };
+		85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +166,11 @@
 		8538535B1D2527F4003872AA /* FutureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FutureCell.m; sourceTree = "<group>"; };
 		8538535C1D2527F4003872AA /* FutureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FutureCell.xib; sourceTree = "<group>"; };
 		8560BF6B7A33709654FD5D7E /* Pods-Life_Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life_Service.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life_Service/Pods-Life_Service.release.xcconfig"; sourceTree = "<group>"; };
+		85F0ED271D254B2500BA6CEC /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
+		85F0ED281D254B2500BA6CEC /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		85F0ED291D254B2500BA6CEC /* CityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityListViewController.xib; sourceTree = "<group>"; };
+		85F0ED2C1D254DEF00BA6CEC /* WeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCity.h; sourceTree = "<group>"; };
+		85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +416,9 @@
 				85384ABD1D250371003872AA /* MainViewController.h */,
 				85384ABE1D250371003872AA /* MainViewController.m */,
 				85384ABF1D250371003872AA /* MainViewController.xib */,
+				85F0ED271D254B2500BA6CEC /* CityListViewController.h */,
+				85F0ED281D254B2500BA6CEC /* CityListViewController.m */,
+				85F0ED291D254B2500BA6CEC /* CityListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -419,6 +430,8 @@
 				85384AC21D250371003872AA /* futherWeather.m */,
 				85384AC31D250371003872AA /* todayWeather.h */,
 				85384AC41D250371003872AA /* todayWeather.m */,
+				85F0ED2C1D254DEF00BA6CEC /* WeatherCity.h */,
+				85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,6 +562,7 @@
 				853853491D25048D003872AA /* bg_na.jpg in Resources */,
 				8538534E1D25048D003872AA /* bg_red@2x.png in Resources */,
 				853853501D25048D003872AA /* bg_sunny.jpg in Resources */,
+				85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */,
 				853853441D25048D003872AA /* account_bg@2x.png in Resources */,
 				52E456931D251DFD002EDFCF /* BusRouteViewController.xib in Resources */,
 				52E456811D251DC6002EDFCF /* icon_search_realtime@3x.png in Resources */,
@@ -653,6 +667,7 @@
 				52E456941D251DFD002EDFCF /* RouteSearchViewController.m in Sources */,
 				85384AD01D250371003872AA /* futherWeather.m in Sources */,
 				52E456901D251DFD002EDFCF /* AllRealTimeRoute.m in Sources */,
+				85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */,
 				852D1D351D24A4B000F1F7D3 /* ContentViewController.m in Sources */,
 				8538535D1D2527F4003872AA /* FutureCell.m in Sources */,
 				852D1D411D24A4EA00F1F7D3 /* ComicWebUtils.m in Sources */,
@@ -660,6 +675,7 @@
 				85384AD21D250371003872AA /* netManager.m in Sources */,
 				52E456921D251DFD002EDFCF /* BusRouteViewController.m in Sources */,
 				852D1D321D24A4B000F1F7D3 /* CartoonBookTableViewController.m in Sources */,
+				85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */,
 				85384ACC1D250371003872AA /* FutherViewController.m in Sources */,
 				85384ACE1D250371003872AA /* MainViewController.m in Sources */,
 				852D1D311D24A4B000F1F7D3 /* BookCapterTableViewController.m in Sources */,
