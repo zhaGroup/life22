@@ -13,10 +13,17 @@
 @end
 
 @implementation AllRealTimeRoute
+- (IBAction)back:(UIButton *)sender {
+
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

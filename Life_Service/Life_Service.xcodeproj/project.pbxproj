@@ -23,6 +23,7 @@
 		52E456931D251DFD002EDFCF /* BusRouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E4568C1D251DFD002EDFCF /* BusRouteViewController.xib */; };
 		52E456941D251DFD002EDFCF /* RouteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E4568E1D251DFD002EDFCF /* RouteSearchViewController.m */; };
 		52E456951D251DFD002EDFCF /* RouteSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E4568F1D251DFD002EDFCF /* RouteSearchViewController.xib */; };
+		52E456AC1D255AF4002EDFCF /* BusWebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E456AB1D255AF4002EDFCF /* BusWebUtils.m */; };
 		850AB7901D23B6740032FEF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 850AB78F1D23B6740032FEF8 /* main.m */; };
 		850AB79B1D23B6740032FEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850AB79A1D23B6740032FEF8 /* Assets.xcassets */; };
 		850AB79E1D23B6740032FEF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850AB79C1D23B6740032FEF8 /* LaunchScreen.storyboard */; };
@@ -110,6 +111,8 @@
 		52E4568D1D251DFD002EDFCF /* RouteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSearchViewController.h; sourceTree = "<group>"; };
 		52E4568E1D251DFD002EDFCF /* RouteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteSearchViewController.m; sourceTree = "<group>"; };
 		52E4568F1D251DFD002EDFCF /* RouteSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RouteSearchViewController.xib; sourceTree = "<group>"; };
+		52E456AA1D255AF4002EDFCF /* BusWebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusWebUtils.h; sourceTree = "<group>"; };
+		52E456AB1D255AF4002EDFCF /* BusWebUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusWebUtils.m; sourceTree = "<group>"; };
 		850AB78B1D23B6740032FEF8 /* Life_Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life_Service.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850AB78F1D23B6740032FEF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		850AB79A1D23B6740032FEF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +247,15 @@
 			path = "../../../../Desktop/公交车";
 			sourceTree = "<group>";
 		};
+		52E456A91D255AD4002EDFCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52E456AA1D255AF4002EDFCF /* BusWebUtils.h */,
+				52E456AB1D255AF4002EDFCF /* BusWebUtils.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		850AB7821D23B6740032FEF8 = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +312,7 @@
 		850AB7C81D23BDC20032FEF8 /* BusRoute (公交线路) */ = {
 			isa = PBXGroup;
 			children = (
+				52E456A91D255AD4002EDFCF /* Model */,
 				850AB7C91D23BDC20032FEF8 /* Controller */,
 			);
 			path = "BusRoute (公交线路)";
@@ -308,15 +321,15 @@
 		850AB7C91D23BDC20032FEF8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52E456871D251DFD002EDFCF /* AllRealTimeRoute.h */,
-				52E456881D251DFD002EDFCF /* AllRealTimeRoute.m */,
-				52E456891D251DFD002EDFCF /* AllRealTimeRoute.xib */,
 				52E4568A1D251DFD002EDFCF /* BusRouteViewController.h */,
 				52E4568B1D251DFD002EDFCF /* BusRouteViewController.m */,
 				52E4568C1D251DFD002EDFCF /* BusRouteViewController.xib */,
 				52E4568D1D251DFD002EDFCF /* RouteSearchViewController.h */,
 				52E4568E1D251DFD002EDFCF /* RouteSearchViewController.m */,
 				52E4568F1D251DFD002EDFCF /* RouteSearchViewController.xib */,
+				52E456871D251DFD002EDFCF /* AllRealTimeRoute.h */,
+				52E456881D251DFD002EDFCF /* AllRealTimeRoute.m */,
+				52E456891D251DFD002EDFCF /* AllRealTimeRoute.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -756,6 +769,7 @@
 				F1E199501D25F1290010000A /* CheCiInfoModel.m in Sources */,
 				F1E199401D25EFC60010000A /* QueryCheCIViewController.m in Sources */,
 				85384AD21D250371003872AA /* netManager.m in Sources */,
+				52E456AC1D255AF4002EDFCF /* BusWebUtils.m in Sources */,
 				52E456921D251DFD002EDFCF /* BusRouteViewController.m in Sources */,
 				852D1D321D24A4B000F1F7D3 /* CartoonBookTableViewController.m in Sources */,
 				85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */,

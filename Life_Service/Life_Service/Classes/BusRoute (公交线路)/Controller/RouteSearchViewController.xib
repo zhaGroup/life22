@@ -11,6 +11,7 @@
                 <outlet property="allRealRoutesButton" destination="euu-cJ-NJa" id="1pO-x2-fla"/>
                 <outlet property="busRouteSearchButton" destination="Vbg-kd-047" id="UYB-rx-G91"/>
                 <outlet property="busRouteSearchField" destination="yVs-A4-8dy" id="dgL-wK-KJC"/>
+                <outlet property="stationSearchTextField" destination="yVs-A4-8dy" id="3ez-h7-aJw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

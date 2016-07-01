@@ -29,6 +29,9 @@
                             <rect key="frame" x="40" y="14" width="23" height="23"/>
                             <animations/>
                             <state key="normal" backgroundImage="item_cancel.png"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="LT8-hC-UkF"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>
@@ -66,7 +69,7 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-            <point key="canvasLocation" x="135" y="402"/>
+            <point key="canvasLocation" x="160" y="254"/>
         </view>
     </objects>
     <resources>

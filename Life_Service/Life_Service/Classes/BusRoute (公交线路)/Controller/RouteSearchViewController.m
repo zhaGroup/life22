@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *allCompanyRoutesButton;
 
+@property (weak, nonatomic) IBOutlet UITextField *stationSearchTextField;
 
 @end
 
@@ -30,7 +31,7 @@
 
 - (IBAction)allRealRoutesButton:(UIButton *)sender {
     AllRealTimeRoute *myVC2 = [[AllRealTimeRoute alloc]init];
-     [self presentViewController:myVC2 animated:YES completion:nil];
+     [self.navigationController pushViewController:myVC2 animated:YES];
     
     
 }
