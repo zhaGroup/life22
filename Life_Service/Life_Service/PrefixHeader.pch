@@ -15,7 +15,7 @@
 #define LYBlueColor [UIColor colorWithRed:6.0/255 green:150.0/255 blue:255.0/255 alpha:1]
 
 
-#define   chenKey  @"59e0dd41f4e8f92f9ccf653933addb34"
+#define   chenKey  @"dc649591000b82f37ea9414e32dd1ff5"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

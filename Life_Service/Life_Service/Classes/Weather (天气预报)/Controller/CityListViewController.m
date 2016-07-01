@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.title=@"城市列表";
     
     
     // Do any additional setup after loading the view from its nib.
@@ -30,12 +30,12 @@
 {
     [super viewWillAppear:YES];
     
-    self.tableView=[[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
     
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
     
-    UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.frame];
+    UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.bounds];
     
     imageV.image=[UIImage imageNamed:@"bg_night_rain.jpg"];
     
@@ -98,7 +98,7 @@
     
     [self.delegate toChooseCity:cityName];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

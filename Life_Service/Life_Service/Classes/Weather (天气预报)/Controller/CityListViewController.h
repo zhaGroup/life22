@@ -17,6 +17,6 @@
 
 @interface CityListViewController : UIViewController
 
-
+@property(nonatomic,copy)NSString  *cityName;
 @property(nonatomic)id<cityDelegate>delegate;
 @end

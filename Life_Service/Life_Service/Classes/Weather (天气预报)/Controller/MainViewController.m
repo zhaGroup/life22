@@ -73,7 +73,7 @@
     
     city.delegate=self;
     
-    [self  presentViewController:city animated:YES completion:nil];
+    [self.navigationController pushViewController:city animated:YES];
     
 }
 
