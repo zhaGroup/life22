@@ -17,7 +17,11 @@
 @end
 
 @implementation BookCapterTableViewController
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.tabBarController.tabBar.hidden = NO;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.allChapter = [NSMutableArray array];
