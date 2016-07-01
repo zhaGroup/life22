@@ -1,5 +1,5 @@
 //
-//  StockViewController.h
+//  CheCiCell.h
 //  demo1
 //
 //  Created by tarena035 on 16/6/30.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StockViewController : UIViewController
+@interface CheCiCell : UITableViewCell
 
 @end

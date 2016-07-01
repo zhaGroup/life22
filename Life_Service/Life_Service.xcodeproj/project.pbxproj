@@ -29,8 +29,6 @@
 		850AB7A61D23B6AC0032FEF8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 850AB7A51D23B6AC0032FEF8 /* Podfile */; };
 		850AB7F01D23BDC20032FEF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 850AB7D81D23BDC20032FEF8 /* AppDelegate.m */; };
 		850AB7F11D23BDC20032FEF8 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 850AB7DB1D23BDC20032FEF8 /* MainTabBarController.m */; };
-		850AB7F21D23BDC20032FEF8 /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 850AB7E11D23BDC20032FEF8 /* StockViewController.m */; };
-		850AB7F31D23BDC20032FEF8 /* StockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 850AB7E21D23BDC20032FEF8 /* StockViewController.xib */; };
 		852D1D311D24A4B000F1F7D3 /* BookCapterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852D1D281D24A4B000F1F7D3 /* BookCapterTableViewController.m */; };
 		852D1D321D24A4B000F1F7D3 /* CartoonBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852D1D2A1D24A4B000F1F7D3 /* CartoonBookTableViewController.m */; };
 		852D1D331D24A4B000F1F7D3 /* ComicBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852D1D2C1D24A4B000F1F7D3 /* ComicBookViewController.m */; };
@@ -74,6 +72,21 @@
 		85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED281D254B2500BA6CEC /* CityListViewController.m */; };
 		85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F0ED291D254B2500BA6CEC /* CityListViewController.xib */; };
 		85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */; };
+		F1E1992E1D25EFA70010000A /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1992C1D25EFA70010000A /* StockViewController.m */; };
+		F1E1992F1D25EFA70010000A /* StockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E1992D1D25EFA70010000A /* StockViewController.xib */; };
+		F1E1993C1D25EFC60010000A /* TrainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E199311D25EFC60010000A /* TrainTableViewCell.m */; };
+		F1E1993D1D25EFC60010000A /* TrainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E199321D25EFC60010000A /* TrainTableViewCell.xib */; };
+		F1E1993E1D25EFC60010000A /* TrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E199341D25EFC60010000A /* TrainViewController.m */; };
+		F1E1993F1D25EFC60010000A /* TrainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E199351D25EFC60010000A /* TrainViewController.xib */; };
+		F1E199401D25EFC60010000A /* QueryCheCIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E199371D25EFC60010000A /* QueryCheCIViewController.m */; };
+		F1E199411D25EFC60010000A /* QueryCheCIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E199381D25EFC60010000A /* QueryCheCIViewController.xib */; };
+		F1E199421D25EFC60010000A /* cheCiModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1993A1D25EFC60010000A /* cheCiModelController.m */; };
+		F1E199431D25EFC60010000A /* cheCiModelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E1993B1D25EFC60010000A /* cheCiModelController.xib */; };
+		F1E199491D25F0330010000A /* CheCiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E199471D25F0330010000A /* CheCiCell.m */; };
+		F1E1994A1D25F0330010000A /* CheCiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E199481D25F0330010000A /* CheCiCell.xib */; };
+		F1E1994F1D25F1290010000A /* CheCiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1994C1D25F1290010000A /* CheCiModel.m */; };
+		F1E199501D25F1290010000A /* CheCiInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1994E1D25F1290010000A /* CheCiInfoModel.m */; };
+		F1E199531D25F1450010000A /* zwebUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E199521D25F1450010000A /* zwebUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,9 +121,6 @@
 		850AB7D81D23BDC20032FEF8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		850AB7DA1D23BDC20032FEF8 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		850AB7DB1D23BDC20032FEF8 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		850AB7E01D23BDC20032FEF8 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockViewController.h; sourceTree = "<group>"; };
-		850AB7E11D23BDC20032FEF8 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockViewController.m; sourceTree = "<group>"; };
-		850AB7E21D23BDC20032FEF8 /* StockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockViewController.xib; sourceTree = "<group>"; };
 		852D1D271D24A4B000F1F7D3 /* BookCapterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCapterTableViewController.h; sourceTree = "<group>"; };
 		852D1D281D24A4B000F1F7D3 /* BookCapterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCapterTableViewController.m; sourceTree = "<group>"; };
 		852D1D291D24A4B000F1F7D3 /* CartoonBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonBookTableViewController.h; sourceTree = "<group>"; };
@@ -171,6 +181,30 @@
 		85F0ED291D254B2500BA6CEC /* CityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityListViewController.xib; sourceTree = "<group>"; };
 		85F0ED2C1D254DEF00BA6CEC /* WeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCity.h; sourceTree = "<group>"; };
 		85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCity.m; sourceTree = "<group>"; };
+		F1E1992B1D25EFA70010000A /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockViewController.h; sourceTree = "<group>"; };
+		F1E1992C1D25EFA70010000A /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockViewController.m; sourceTree = "<group>"; };
+		F1E1992D1D25EFA70010000A /* StockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockViewController.xib; sourceTree = "<group>"; };
+		F1E199301D25EFC60010000A /* TrainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainTableViewCell.h; path = Controller/TrainTableViewCell.h; sourceTree = "<group>"; };
+		F1E199311D25EFC60010000A /* TrainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainTableViewCell.m; path = Controller/TrainTableViewCell.m; sourceTree = "<group>"; };
+		F1E199321D25EFC60010000A /* TrainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainTableViewCell.xib; path = Controller/TrainTableViewCell.xib; sourceTree = "<group>"; };
+		F1E199331D25EFC60010000A /* TrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainViewController.h; sourceTree = "<group>"; };
+		F1E199341D25EFC60010000A /* TrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainViewController.m; sourceTree = "<group>"; };
+		F1E199351D25EFC60010000A /* TrainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainViewController.xib; sourceTree = "<group>"; };
+		F1E199361D25EFC60010000A /* QueryCheCIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryCheCIViewController.h; sourceTree = "<group>"; };
+		F1E199371D25EFC60010000A /* QueryCheCIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryCheCIViewController.m; sourceTree = "<group>"; };
+		F1E199381D25EFC60010000A /* QueryCheCIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryCheCIViewController.xib; sourceTree = "<group>"; };
+		F1E199391D25EFC60010000A /* cheCiModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cheCiModelController.h; sourceTree = "<group>"; };
+		F1E1993A1D25EFC60010000A /* cheCiModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cheCiModelController.m; sourceTree = "<group>"; };
+		F1E1993B1D25EFC60010000A /* cheCiModelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cheCiModelController.xib; sourceTree = "<group>"; };
+		F1E199461D25F0330010000A /* CheCiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheCiCell.h; sourceTree = "<group>"; };
+		F1E199471D25F0330010000A /* CheCiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheCiCell.m; sourceTree = "<group>"; };
+		F1E199481D25F0330010000A /* CheCiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheCiCell.xib; sourceTree = "<group>"; };
+		F1E1994B1D25F1290010000A /* CheCiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheCiModel.h; sourceTree = "<group>"; };
+		F1E1994C1D25F1290010000A /* CheCiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheCiModel.m; sourceTree = "<group>"; };
+		F1E1994D1D25F1290010000A /* CheCiInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheCiInfoModel.h; sourceTree = "<group>"; };
+		F1E1994E1D25F1290010000A /* CheCiInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheCiInfoModel.m; sourceTree = "<group>"; };
+		F1E199511D25F1450010000A /* zwebUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zwebUtil.h; sourceTree = "<group>"; };
+		F1E199521D25F1450010000A /* zwebUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zwebUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +370,8 @@
 		850AB7DE1D23BDC20032FEF8 /* train(火车查询) */ = {
 			isa = PBXGroup;
 			children = (
+				F1E199451D25EFD90010000A /* Model */,
+				F1E199441D25EFD00010000A /* View */,
 				850AB7DF1D23BDC20032FEF8 /* Controller */,
 			);
 			name = "train(火车查询)";
@@ -345,10 +381,19 @@
 		850AB7DF1D23BDC20032FEF8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F1E199331D25EFC60010000A /* TrainViewController.h */,
+				F1E199341D25EFC60010000A /* TrainViewController.m */,
+				F1E199351D25EFC60010000A /* TrainViewController.xib */,
+				F1E199361D25EFC60010000A /* QueryCheCIViewController.h */,
+				F1E199371D25EFC60010000A /* QueryCheCIViewController.m */,
+				F1E199381D25EFC60010000A /* QueryCheCIViewController.xib */,
+				F1E199391D25EFC60010000A /* cheCiModelController.h */,
+				F1E1993A1D25EFC60010000A /* cheCiModelController.m */,
+				F1E1993B1D25EFC60010000A /* cheCiModelController.xib */,
+				F1E1992B1D25EFA70010000A /* StockViewController.h */,
+				F1E1992C1D25EFA70010000A /* StockViewController.m */,
+				F1E1992D1D25EFA70010000A /* StockViewController.xib */,
 				F12A9CBA1D23C24300E49384 /* WebUtil */,
-				850AB7E01D23BDC20032FEF8 /* StockViewController.h */,
-				850AB7E11D23BDC20032FEF8 /* StockViewController.m */,
-				850AB7E21D23BDC20032FEF8 /* StockViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -491,8 +536,34 @@
 		F12A9CBA1D23C24300E49384 /* WebUtil */ = {
 			isa = PBXGroup;
 			children = (
+				F1E199511D25F1450010000A /* zwebUtil.h */,
+				F1E199521D25F1450010000A /* zwebUtil.m */,
 			);
 			name = WebUtil;
+			sourceTree = "<group>";
+		};
+		F1E199441D25EFD00010000A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1E199301D25EFC60010000A /* TrainTableViewCell.h */,
+				F1E199311D25EFC60010000A /* TrainTableViewCell.m */,
+				F1E199321D25EFC60010000A /* TrainTableViewCell.xib */,
+				F1E199461D25F0330010000A /* CheCiCell.h */,
+				F1E199471D25F0330010000A /* CheCiCell.m */,
+				F1E199481D25F0330010000A /* CheCiCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F1E199451D25EFD90010000A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1E1994B1D25F1290010000A /* CheCiModel.h */,
+				F1E1994C1D25F1290010000A /* CheCiModel.m */,
+				F1E1994D1D25F1290010000A /* CheCiInfoModel.h */,
+				F1E1994E1D25F1290010000A /* CheCiInfoModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +626,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E1993D1D25EFC60010000A /* TrainTableViewCell.xib in Resources */,
 				52E4567E1D251DC6002EDFCF /* icon_home_navi_near_white@2x.png in Resources */,
 				850AB7A61D23B6AC0032FEF8 /* Podfile in Resources */,
 				853853511D25048D003872AA /* bg_yellow@2x.png in Resources */,
@@ -562,12 +634,16 @@
 				853853491D25048D003872AA /* bg_na.jpg in Resources */,
 				8538534E1D25048D003872AA /* bg_red@2x.png in Resources */,
 				853853501D25048D003872AA /* bg_sunny.jpg in Resources */,
+				F1E1993F1D25EFC60010000A /* TrainViewController.xib in Resources */,
 				85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */,
+				F1E1994A1D25F0330010000A /* CheCiCell.xib in Resources */,
 				853853441D25048D003872AA /* account_bg@2x.png in Resources */,
 				52E456931D251DFD002EDFCF /* BusRouteViewController.xib in Resources */,
 				52E456811D251DC6002EDFCF /* icon_search_realtime@3x.png in Resources */,
 				85384ACD1D250371003872AA /* FutherViewController.xib in Resources */,
 				850AB79E1D23B6740032FEF8 /* LaunchScreen.storyboard in Resources */,
+				F1E1992F1D25EFA70010000A /* StockViewController.xib in Resources */,
+				F1E199411D25EFC60010000A /* QueryCheCIViewController.xib in Resources */,
 				852D1D4B1D24BCBB00F1F7D3 /* welcome1.png in Resources */,
 				853853471D25048D003872AA /* bg_haze.jpg in Resources */,
 				852D1D4A1D24BCBB00F1F7D3 /* Icon.png in Resources */,
@@ -593,10 +669,10 @@
 				52E456951D251DFD002EDFCF /* RouteSearchViewController.xib in Resources */,
 				853853451D25048D003872AA /* bg_blue@2x.png in Resources */,
 				52E456831D251DC6002EDFCF /* img_home_collection_empty.png in Resources */,
-				850AB7F31D23BDC20032FEF8 /* StockViewController.xib in Resources */,
 				8538534A1D25048D003872AA /* bg_night_fog.jpg in Resources */,
 				52E456841D251DC6002EDFCF /* item_cancel@2x.png in Resources */,
 				52E456821D251DC6002EDFCF /* icon_transfer_my_location@2x.png in Resources */,
+				F1E199431D25EFC60010000A /* cheCiModelController.xib in Resources */,
 				853853411D25048D003872AA /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,7 +733,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				850AB7F01D23BDC20032FEF8 /* AppDelegate.m in Sources */,
+				F1E1994F1D25F1290010000A /* CheCiModel.m in Sources */,
 				85384AD11D250371003872AA /* todayWeather.m in Sources */,
+				F1E1992E1D25EFA70010000A /* StockViewController.m in Sources */,
 				850AB7F11D23BDC20032FEF8 /* MainTabBarController.m in Sources */,
 				852D1D331D24A4B000F1F7D3 /* ComicBookViewController.m in Sources */,
 				852D1D3F1D24A4EA00F1F7D3 /* Book.m in Sources */,
@@ -665,19 +743,25 @@
 				852D1D401D24A4EA00F1F7D3 /* Chapter.m in Sources */,
 				852D1D451D24A4F300F1F7D3 /* BookCell.m in Sources */,
 				52E456941D251DFD002EDFCF /* RouteSearchViewController.m in Sources */,
+				F1E199491D25F0330010000A /* CheCiCell.m in Sources */,
 				85384AD01D250371003872AA /* futherWeather.m in Sources */,
 				52E456901D251DFD002EDFCF /* AllRealTimeRoute.m in Sources */,
 				85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */,
 				852D1D351D24A4B000F1F7D3 /* ContentViewController.m in Sources */,
 				8538535D1D2527F4003872AA /* FutureCell.m in Sources */,
+				F1E199531D25F1450010000A /* zwebUtil.m in Sources */,
 				852D1D411D24A4EA00F1F7D3 /* ComicWebUtils.m in Sources */,
-				850AB7F21D23BDC20032FEF8 /* StockViewController.m in Sources */,
+				F1E1993C1D25EFC60010000A /* TrainTableViewCell.m in Sources */,
+				F1E1993E1D25EFC60010000A /* TrainViewController.m in Sources */,
+				F1E199501D25F1290010000A /* CheCiInfoModel.m in Sources */,
+				F1E199401D25EFC60010000A /* QueryCheCIViewController.m in Sources */,
 				85384AD21D250371003872AA /* netManager.m in Sources */,
 				52E456921D251DFD002EDFCF /* BusRouteViewController.m in Sources */,
 				852D1D321D24A4B000F1F7D3 /* CartoonBookTableViewController.m in Sources */,
 				85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */,
 				85384ACC1D250371003872AA /* FutherViewController.m in Sources */,
 				85384ACE1D250371003872AA /* MainViewController.m in Sources */,
+				F1E199421D25EFC60010000A /* cheCiModelController.m in Sources */,
 				852D1D311D24A4B000F1F7D3 /* BookCapterTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
