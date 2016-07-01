@@ -33,7 +33,7 @@
             
         }
         cheInfo.cheCiModelArr = allListArr;
-//        NSLog(@"%@",cheInfo.start);
+//        NSLog(@"cheInfo = %@",cheInfo.start);
         dispatch_async(dispatch_get_main_queue(), ^{
             callBack(cheInfo);
 

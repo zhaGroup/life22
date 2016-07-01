@@ -23,6 +23,7 @@
     self.myTableView.delegate = self;
     [self.myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
+
     self.trainArr = @[@"车次查询",@"站到站查询",@"实时余票查询",@"火车票代售点查询",@""];
     [zwebUtil reqestCheCiNameWithName:@"g4" andCallBack:^(id obj) {
         

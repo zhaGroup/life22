@@ -26,23 +26,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+   
     [zwebUtil reqestCheCiNameWithName:self.queryName andCallBack:^(id obj) {
         self.cheInfo = obj;
-        NSLog(@"obj = %@",obj);
+//        NSLog(@"obj = %@",self.cheInfo);
+        [self.cheCiModelInfoTabelVice reloadData];
+        [self cheInfoMessage:self.cheInfo];
     }];
-    NSLog(@"%@",self.cheInfo.start);
-    self.startModelInfo.text = self.cheInfo.start;
-    self.endModelInfo.text = self.cheInfo.end;
-    self.starttimeModelInfo.text = self.cheInfo.starttime;
-    self.endtimeModelInfo.text = self.cheInfo.endtime;
-    
-    NSLog(@"checi = %ld",self.cheInfo.cheCiModelArr.count);
+//    NSLog(@"%@",self.cheInfo.start);
+//    
+//    NSLog(@"checi = %ld",self.cheInfo.cheCiModelArr.count);
     self.cheCiModelInfoTabelVice.delegate = self;
     self.cheCiModelInfoTabelVice.dataSource = self;
     
     [self.cheCiModelInfoTabelVice registerNib:[UINib nibWithNibName:@"CheCiCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"checiCell"];
 }
 
+-(void)cheInfoMessage:(CheCiInfoModel*)cheInfo
+{
+    self.startModelInfo.text = cheInfo.start;
+    self.endModelInfo.text = cheInfo.end;
+    self.starttimeModelInfo.text = cheInfo.starttime;
+    self.endtimeModelInfo.text = cheInfo.endtime;
+
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -60,6 +71,12 @@
 {
     CheCiCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checiCell" forIndexPath:indexPath];
     
+    CheCiModel *cm = self.cheInfo.cheCiModelArr[indexPath.row];
+    cell.arrived_time.text = cm.arrived_time;
+    cell.train_id.text = cm.train_id;
+    cell.station_name.text = cm.station_name;
+    cell.leave_time.text = cm.leave_time;
+//    NSLog(@"xx = %@",cell.station_name.text);
     return cell;
     
 }

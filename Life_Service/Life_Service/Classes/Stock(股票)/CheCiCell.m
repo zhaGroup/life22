@@ -9,11 +9,7 @@
 #import "CheCiCell.h"
 
 @interface CheCiCell ()
-@property (weak, nonatomic) IBOutlet UILabel *arrived_time;
-@property (weak, nonatomic) IBOutlet UILabel *train_id;
 
-@property (weak, nonatomic) IBOutlet UILabel *station_name;
-@property (weak, nonatomic) IBOutlet UILabel *leave_time;
 
 @end
 
