@@ -79,6 +79,6 @@
     <resources>
         <image name="icon_home_navi_near_white.png" width="16" height="30"/>
         <image name="icon_home_search.png" width="18" height="18"/>
-        <image name="img_home_collection_empty.png" width="736" height="764"/>
+        <image name="img_home_collection_empty.png" width="21" height="24"/>
     </resources>
 </document>

@@ -11,7 +11,7 @@ typedef void (^MyCallback) (id obj);
 @interface BusWebUtils : NSObject
 
 +(void)requestCityWithName:(NSString *)cityname andCallback:(MyCallback)callback;
-+(void)requestbusRouteWithName:(NSString *);
+//+(void)requestbusRouteWithName:(NSString *);
 
 
 
