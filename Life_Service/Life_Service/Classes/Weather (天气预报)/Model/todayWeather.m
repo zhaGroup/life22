@@ -19,14 +19,14 @@
     {
         
         
-        self.lon=[NSString stringWithFormat:@"%@",dic[@"coord"][@"lon"]];
-        self.lat=[NSString stringWithFormat:@"%@",dic[@"coord"][@"lat"]];
+        self.lon=[NSString stringWithFormat:@"%@°",dic[@"coord"][@"lon"]];
+        self.lat=[NSString stringWithFormat:@"%@°",dic[@"coord"][@"lat"]];
         
         NSString *mainDescription=dic[@"weather"][0][@"main"];
         self.mainDescription=[self changeToChinese:mainDescription];
         
-        self.pressure=[NSString stringWithFormat:@"%@",dic[@"main"][@"pressure"]];
-        self.humidity=[NSString stringWithFormat:@"%@",dic[@"main"][@"humidity"]];
+        self.pressure=[NSString stringWithFormat:@"%@Pa",dic[@"main"][@"pressure"]];
+        self.humidity=[NSString stringWithFormat:@"%@%%rh",dic[@"main"][@"humidity"]];
         
         
         NSNumber *temp=dic[@"main"][@"temp"];
@@ -42,10 +42,10 @@
         
         self.temp_max=[self changetypeWith:temp_max];
         
-        self.speed=[NSString stringWithFormat:@"%@",dic[@"wind"][@"speed"]];
+        self.speed=[NSString stringWithFormat:@"%@m/s",dic[@"wind"][@"speed"]];
         self.name=dic[@"name"];
         
-        NSLog(@"%@",self.lon);
+      
     }
     return self;
 }
@@ -55,7 +55,7 @@
 {
     int tep=[number intValue]-273;
     
-    return [ NSString stringWithFormat:@"%@" ,[NSNumber numberWithInt:tep] ];
+    return [ NSString stringWithFormat:@"%@℃" ,[NSNumber numberWithInt:tep] ];
 }
 
 -(NSString*)changeToChinese:(NSString*)name

@@ -36,7 +36,31 @@
     }];
 }
 
-
++(void)GetCityFutureWeatherWithCityName:(NSString *)name andBlock:(MycallBack)block
+{
+    NSString *path=@"http://api.openweathermap.org/data/2.5/forecast";
+    NSDictionary *params=@{@"appid":chenKey,@"q":name,@"mode":@"Json" };
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+    [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSArray *listArray=DataDic[@"list"];
+        NSMutableArray *mutableArray=[NSMutableArray array];
+        for (NSDictionary *dic in listArray)
+        {
+            futherWeather *f=[[futherWeather alloc]initWithDic:dic];
+            [mutableArray addObject:f];
+        }
+      
+        block(mutableArray);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+    }];
+}
 
 
 @end

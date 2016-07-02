@@ -10,23 +10,68 @@
 
 @implementation futherWeather
 
--(instancetype)initWithDic:(NSDictionary*)dic
+-(instancetype)initWithDic:(NSDictionary *)dic
 {
     if (self=[super init])
     {
-//        @property(nonatomic,copy)NSString* temperature;
-//        @property(nonatomic,copy)NSString* weather;
-//        @property(nonatomic,copy)NSString* wind;
-//        @property(nonatomic,copy)NSString* week;
-//        @property(nonatomic,copy)NSString* date;
         
-        self.temperature=dic[@"temperature"];
-        self.weather=dic[@"weather"];
-        self.wind=dic[@"wind"];
-        self.week=dic[@"week"];
-        self.date=dic[@"date"];
-    
+        NSString *mainDescription=dic[@"weather"][0][@"main"];
+        self.mainDescription=[self changeToChinese:mainDescription];
+        
+        self.pressure=[NSString stringWithFormat:@"%@Pa",dic[@"main"][@"pressure"]];
+        self.humidity=[NSString stringWithFormat:@"%@%%rh",dic[@"main"][@"humidity"]];
+        
+        
+        NSNumber *temp=dic[@"main"][@"temp"];
+        self.temp=[self changetypeWith:temp];
+        
+        
+        NSNumber *temp_min=dic[@"main"][@"temp_min"];
+        
+        self.temp_min=[self changetypeWith:temp_min];
+        
+        
+        NSNumber *temp_max=dic[@"main"][@"temp_max"];
+        
+        self.temp_max=[self changetypeWith:temp_max];
+        
+        self.speed=[NSString stringWithFormat:@"%@m/s",dic[@"wind"][@"speed"]];
+        
+        self.time=dic[@"dt_txt"];
+      
     }
     return self;
+}
+
+
+-(NSString*)changetypeWith:(NSNumber *)number
+{
+    int tep=[number intValue]-273;
+    
+    return [ NSString stringWithFormat:@"%@℃" ,[NSNumber numberWithInt:tep] ];
+}
+
+-(NSString*)changeToChinese:(NSString*)name
+{
+    if ([name isEqualToString:@"Clouds"])
+    {
+        return @"多云";
+    }
+    else if ([name isEqualToString:@"Rain"])
+        
+    {
+        return @"下雨";
+    }
+    else if ([name isEqualToString:@"Clear"])
+        
+    {
+        return @"晴朗";
+    }
+    
+    else
+    {
+        return @"晴天";
+    }
+    
 }
 @end

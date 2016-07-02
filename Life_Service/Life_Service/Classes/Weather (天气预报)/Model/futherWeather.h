@@ -9,20 +9,26 @@
 #import <Foundation/Foundation.h>
 
 @interface futherWeather : NSObject
-//"temperature": "26℃~32℃",
-//"weather": "雷阵雨转多云",
-//"weather_id": {},
-//"wind": "南风3-4 级",
-//"week": "星期四",
-//"date": "20160630"
 
 
-@property(nonatomic,copy)NSString* temperature;
-@property(nonatomic,copy)NSString* weather;
-@property(nonatomic,copy)NSString* wind;
-@property(nonatomic,copy)NSString* week;
-@property(nonatomic,copy)NSString* date;
+
+@property(nonatomic,copy)NSString* mainDescription;
+
+@property(nonatomic,copy)NSString* pressure;
+@property(nonatomic,copy)NSString* humidity;
+
+@property(nonatomic,copy)NSString* temp;
+@property(nonatomic,copy)NSString* temp_min;
+@property(nonatomic,copy)NSString* temp_max;
+
+@property(nonatomic,copy)NSString* speed;
+
+@property(nonatomic,copy)NSString* time;
 
 
+-(NSString*)changetypeWith:(NSNumber *)number;
+
+-(NSString*)changeToChinese:(NSString*)name;
 -(instancetype)initWithDic:(NSDictionary*)dic;
+
 @end

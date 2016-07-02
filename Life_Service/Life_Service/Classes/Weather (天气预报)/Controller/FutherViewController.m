@@ -20,15 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSLog(@"%@",self.title);
     self.tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
   
-    
-    
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
-    
     
     UIImageView *imageV=[[UIImageView alloc]initWithFrame:self.view.bounds];
     
@@ -36,18 +31,21 @@
     
     [self.view addSubview:imageV];
     
+    [netManager GetCityFutureWeatherWithCityName:self.title andBlock:^(id obj) {
+        //
+        self.weatherArray=obj;
+        
+        [self.tableView reloadData];
+    }];
     
-   
-    
-      [self.tableView registerNib:[UINib nibWithNibName:@"FutureCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    self.tableView.backgroundColor=[UIColor clearColor];
+    [self.tableView registerNib:[UINib nibWithNibName:@"FutureCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
 
-    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    
     
     
 }
@@ -61,8 +59,6 @@
 {
     return self.weatherArray.count;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -78,6 +74,6 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 87;
+    return 80;
 }
 @end

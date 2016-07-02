@@ -23,24 +23,38 @@
 -(void)setFuther:(futherWeather *)futher
 {
     _futher=futher;
-    self.temperatureLabel.text=_futher.temperature;
-    self.weekLabel.text=_futher.week;
-    self.weatherLabel.text=_futher.weather;
-    NSString *newDate=[self getGoodString:_futher.date];
-    self.dateLabel.text=newDate;
-    self.windLabel.text=_futher.wind;
+    self.mainDescription.text=_futher.mainDescription;
+    self.pressure.text=_futher.pressure;
+    self.humidity.text=_futher.humidity;
+   
+    self.temp.text=_futher.temp;
+    self.temp_min.text=_futher.temp_min;
+    self.temp_max.text=_futher.temp_max;
+    
+    self.time.text=_futher.time;
+    
+    self.speed.text=_futher.speed;
+    
     
 }
 
--(NSString*)getGoodString:(NSString*)oldDate
-{
-    NSString *year=[oldDate substringToIndex:4];
-    
-    NSString *month=[oldDate substringWithRange:NSMakeRange(4, 2)];
-    NSString *day=[oldDate substringFromIndex:6];
-    
-    NSString *new=[NSString stringWithFormat:@"%@年%@月%@日",year,month,day];
-    return new;
-}
+//@property (weak, nonatomic) IBOutlet UILabel *mainDescription;
+//
+//
+//@property (weak, nonatomic) IBOutlet UILabel *pressure;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *humidity;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *temp;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *temp_min;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *time;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *temp_max;
+//
+//@property (weak, nonatomic) IBOutlet UILabel *speed;
+
+
 
 @end

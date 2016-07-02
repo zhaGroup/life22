@@ -42,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self.searchTF becomeFirstResponder];
    
 }
 
@@ -50,11 +50,8 @@
 {
     [super viewWillAppear:YES];
     
-//    UIBarButtonItem *cityItem=[[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStylePlain  target:self action:@selector(chooseCity)];
-//    
-//    self.navigationItem.rightBarButtonItem=cityItem;
-    
-    
+
+
     [self getWeatherData];
   
 }
@@ -86,13 +83,29 @@
          
      }];
 }
-
-
-
+//搜索天气
 - (IBAction)searchData:(UIButton *)sender
 {
     [self getWeatherData];
+    
+    [self.searchTF resignFirstResponder];
 }
+//点击空白收起键盘
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.searchTF resignFirstResponder];
+}
+
+- (IBAction)getFutureWeaher:(UIButton *)sender
+{
+    FutherViewController *future=[[FutherViewController alloc]init];
+    
+    future.title=self.cityName.text;
+    [self.navigationController pushViewController:future animated:YES];
+}
+
+
+
 
 
 @end
