@@ -70,8 +70,6 @@
 		853853521D25048D003872AA /* blueBtnSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 853853401D25048D003872AA /* blueBtnSmall.png */; };
 		8538535D1D2527F4003872AA /* FutureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538535B1D2527F4003872AA /* FutureCell.m */; };
 		8538535E1D2527F4003872AA /* FutureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8538535C1D2527F4003872AA /* FutureCell.xib */; };
-		85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED281D254B2500BA6CEC /* CityListViewController.m */; };
-		85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F0ED291D254B2500BA6CEC /* CityListViewController.xib */; };
 		85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */; };
 		F174A56C1D269AA5006C7A52 /* CheCiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F174A56A1D269AA5006C7A52 /* CheCiCell.m */; };
 		F174A56D1D269AA5006C7A52 /* CheCiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F174A56B1D269AA5006C7A52 /* CheCiCell.xib */; };
@@ -180,9 +178,6 @@
 		8538535B1D2527F4003872AA /* FutureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FutureCell.m; sourceTree = "<group>"; };
 		8538535C1D2527F4003872AA /* FutureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FutureCell.xib; sourceTree = "<group>"; };
 		8560BF6B7A33709654FD5D7E /* Pods-Life_Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life_Service.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life_Service/Pods-Life_Service.release.xcconfig"; sourceTree = "<group>"; };
-		85F0ED271D254B2500BA6CEC /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
-		85F0ED281D254B2500BA6CEC /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
-		85F0ED291D254B2500BA6CEC /* CityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityListViewController.xib; sourceTree = "<group>"; };
 		85F0ED2C1D254DEF00BA6CEC /* WeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCity.h; sourceTree = "<group>"; };
 		85F0ED2D1D254DEF00BA6CEC /* WeatherCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCity.m; sourceTree = "<group>"; };
 		F174A5691D269AA5006C7A52 /* CheCiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheCiCell.h; sourceTree = "<group>"; };
@@ -480,9 +475,6 @@
 				85384ABD1D250371003872AA /* MainViewController.h */,
 				85384ABE1D250371003872AA /* MainViewController.m */,
 				85384ABF1D250371003872AA /* MainViewController.xib */,
-				85F0ED271D254B2500BA6CEC /* CityListViewController.h */,
-				85F0ED281D254B2500BA6CEC /* CityListViewController.m */,
-				85F0ED291D254B2500BA6CEC /* CityListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -659,7 +651,6 @@
 				8538534E1D25048D003872AA /* bg_red@2x.png in Resources */,
 				853853501D25048D003872AA /* bg_sunny.jpg in Resources */,
 				F174A57D1D269AAD006C7A52 /* TrainViewController.xib in Resources */,
-				85F0ED2B1D254B2500BA6CEC /* CityListViewController.xib in Resources */,
 				853853441D25048D003872AA /* account_bg@2x.png in Resources */,
 				F174A58F1D269AC6006C7A52 /* StockViewController.xib in Resources */,
 				52E456931D251DFD002EDFCF /* BusRouteViewController.xib in Resources */,
@@ -772,7 +763,6 @@
 				85384AD01D250371003872AA /* futherWeather.m in Sources */,
 				F174A57E1D269AAD006C7A52 /* QueryCheCIViewController.m in Sources */,
 				52E456901D251DFD002EDFCF /* AllRealTimeRoute.m in Sources */,
-				85F0ED2A1D254B2500BA6CEC /* CityListViewController.m in Sources */,
 				F174A57C1D269AAD006C7A52 /* TrainViewController.m in Sources */,
 				F174A58A1D269ABB006C7A52 /* zwebUtil.m in Sources */,
 				852D1D351D24A4B000F1F7D3 /* ContentViewController.m in Sources */,

@@ -13,33 +13,13 @@
 #import "WeatherCity.h"
 @implementation netManager
 
-//得到今天的天气
-+(void)getTodayWeatherWithCityName:(NSString *)cityName andBlcok:(MycallBack)block
-{
-    NSString *path=@"http://v.juhe.cn/weather/index";
-    NSDictionary *params=@{@"key":chenKey,@"cityname":cityName};
-    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
-    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-    
-    [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-       
-        NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-        NSDictionary *today=DataDic[@"result"][@"today"];
-       
 
-        todayWeather *t=[[todayWeather alloc]initWithDic:today];
-        block(t);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-       
-        NSLog(@"%@",error);
-    }];
-}
 
-//得到未来的天气
-+(void)getFutherWeatherWithCityName:(NSString *)cityName andBlcok:(MycallBack)block
+//得到城市天气数据国外网站的
++(void)GEtCityWeatherWithCityName:(NSString *)string andBlock:(MycallBack)block
 {
-    NSString *path=@"http://v.juhe.cn/weather/index";
-    NSDictionary *params=@{@"key":chenKey,@"cityname":cityName};
+    NSString *path=@"http://api.openweathermap.org/data/2.5/weather";
+    NSDictionary *params=@{@"appid":chenKey,@"q":string };
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
     
@@ -47,28 +27,8 @@
         
         NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         
-        NSDictionary *future=DataDic[@"result"][@"future"];
-        NSMutableArray *mutableArray=[NSMutableArray array];
-        
-        
-        //得到乱序的时间 所有对象的Key
-        NSArray *array =[future allKeys];
-      
-        //排序 对时间
-       NSArray *cityNewKey= [ array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-           return [(NSString*) obj1 compare:(NSString*)obj2];
-        }];
-        
-       
-        for (int i=0; i<cityNewKey.count; i++)
-        {
-        NSString *key=cityNewKey[i];
-        NSDictionary *dic=future[key];
-        futherWeather   *t=[[futherWeather alloc]initWithDic:dic];
-        [mutableArray addObject:t];
-        }
-        block(mutableArray);
-       
+        todayWeather *today=[[todayWeather alloc]initWithDic:DataDic];
+        block(today);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -77,33 +37,6 @@
 }
 
 
-+(void)getCityWithBlock:(MycallBack)block
-{
-    NSString *path=@"http://v.juhe.cn/weather/citys";
-    NSDictionary *params=@{@"key":chenKey };
-    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
-    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-    
-    [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSDictionary *DataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-        
-        NSArray *cityArray=DataDic[@"result"];
-    
-        NSMutableArray *mutableArray=[NSMutableArray array];
-        
-        for (int i=0; i<cityArray.count; i++)
-        {
-            NSDictionary *cityDic=cityArray[i];
-            WeatherCity *city=[[WeatherCity alloc]initWithDic:cityDic];
-            [mutableArray addObject:city];
-        }
-        block(mutableArray);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"%@",error);
-    }];
-}
+
 
 @end

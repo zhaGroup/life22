@@ -37,16 +37,7 @@
     [self.view addSubview:imageV];
     
     
-    self.tableView.backgroundColor=[UIColor clearColor];
-    
-    [netManager getFutherWeatherWithCityName:self.title andBlcok:^(id obj) {
-        //
-        self.weatherArray=obj;
-//        NSLog(@"%@",self.weatherArray);
-        
-        
-        [self.tableView reloadData];
-    }];
+   
     
       [self.tableView registerNib:[UINib nibWithNibName:@"FutureCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];

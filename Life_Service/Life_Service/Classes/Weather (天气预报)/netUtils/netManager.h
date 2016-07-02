@@ -13,12 +13,7 @@ typedef void (^MycallBack)(id obj);
 @interface netManager : NSObject
 
 
-//得到今天的天气数据
-+(void)getTodayWeatherWithCityName:(NSString*)cityName andBlcok:(MycallBack)block;
 
-//得到明天的天气
-+(void)getFutherWeatherWithCityName:(NSString *)cityName andBlcok:(MycallBack)block;
-
-//得到所有城市
-+(void)getCityWithBlock:(MycallBack)block;
+//得到城市天气数据国外网站的
++(void)GEtCityWeatherWithCityName:(NSString *)string andBlock:(MycallBack)block;
 @end

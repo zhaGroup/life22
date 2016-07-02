@@ -10,32 +10,37 @@
 #import "netManager.h"
 #import "todayWeather.h"
 #import "FutherViewController.h"
-#import "CityListViewController.h"
-@interface MainViewController ()<cityDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
+@interface MainViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *temperatureLable;
 
-@property (weak, nonatomic) IBOutlet UILabel *dateLable;
+@property (weak, nonatomic) IBOutlet UITextField *searchTF;
 
-@property (weak, nonatomic) IBOutlet UILabel *windLable;
 
-@property (weak, nonatomic) IBOutlet UILabel *weekLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lonLabel;
+@property (weak, nonatomic) IBOutlet UILabel *latLabel;
 
-@property (weak, nonatomic) IBOutlet UITextView *adviceTextV;
+@property (weak, nonatomic) IBOutlet UILabel *cityName;
 
-@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mianDisLabel;
 
-@property(nonatomic,strong)UITableView  *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *minTepLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *avTepLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *maxTepLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
     
    
@@ -45,54 +50,49 @@
 {
     [super viewWillAppear:YES];
     
-    UIBarButtonItem *cityItem=[[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStylePlain  target:self action:@selector(chooseCity)];
+//    UIBarButtonItem *cityItem=[[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStylePlain  target:self action:@selector(chooseCity)];
+//    
+//    self.navigationItem.rightBarButtonItem=cityItem;
     
-    self.navigationItem.rightBarButtonItem=cityItem;
     
-    
-    
-    [netManager getTodayWeatherWithCityName:self.cityLabel.text andBlcok:^(id obj) {
-        todayWeather *t=obj;
-        self.weatherLabel.text=t.weather;
-        self.temperatureLable.text=t.temperature;
-        self.dateLable.text=t.date_y;
-        self.windLable.text=t.wind;
-        self.weekLabel.text=t.week;
-        self.adviceTextV.text=t.dressing_advice;
-    }];
+    [self getWeatherData];
+  
 }
 
-
-
-
-
-//选择城市
--(void)chooseCity
+-(void)getWeatherData
 {
-    CityListViewController *city=[[CityListViewController alloc]init];
-    
-    city.delegate=self;
-    
-    [self.navigationController pushViewController:city animated:YES];
-    
+    [netManager GEtCityWeatherWithCityName:self.searchTF.text andBlock:^(id obj)
+     {
+         
+         todayWeather *t=obj;
+         self.cityName.text=t.name;
+         
+         self.lonLabel.text=t.lon;
+         
+         self.latLabel.text=t.lat;
+         
+         self.mianDisLabel.text=t.mainDescription;
+         
+         self.minTepLabel.text=t.temp_min;
+         self.avTepLabel.text=t.temp;
+         
+         self.maxTepLabel.text=t.temp_max;
+         
+         self.humidityLabel.text=t.humidity;
+         
+         self.pressureLabel.text=t.pressure;
+         
+         self.windSpeedLabel.text=t.speed;
+         
+     }];
 }
 
--(void)toChooseCity:(NSString *)cityName
+
+
+- (IBAction)searchData:(UIButton *)sender
 {
-    self.cityLabel.text=cityName;
+    [self getWeatherData];
 }
-- (IBAction)getFutureWeather:(UIButton *)sender
-{
-    FutherViewController *futher=[[FutherViewController alloc]init];
-    
-    futher.title=self.cityLabel.text;
-    
-    
-    
-    [self.navigationController pushViewController:futher animated:YES];
-}
-
-
 
 
 @end
