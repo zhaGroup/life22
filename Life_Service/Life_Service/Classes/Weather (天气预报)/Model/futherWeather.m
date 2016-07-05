@@ -34,7 +34,9 @@
         NSNumber *temp_max=dic[@"main"][@"temp_max"];
         
         self.temp_max=[self changetypeWith:temp_max];
-        if (dic[@"wind"]==NULL)
+        
+        NSArray *A=dic[@"wind"];
+        if (A==nil)
         {
             self.speed=@"未知的";
         }
