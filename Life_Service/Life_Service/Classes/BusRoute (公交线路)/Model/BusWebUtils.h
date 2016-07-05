@@ -10,9 +10,18 @@
 typedef void (^MyCallback) (id obj);
 @interface BusWebUtils : NSObject
 
-+(void)requestCityWithName:(NSString *)cityname andCallback:(MyCallback)callback;
-//+(void)requestbusRouteWithName:(NSString *);
-
+//城市接口
+//+(void)requestCityWithName:(NSString *)cityname andCallback:(MyCallback)callback;
+//线路查询接口
++(void)requestCityWithName:(NSString *)cityname andBusRouteWithName:(NSString *)busRouteName  andCallback:(MyCallback)callback;
+//站台查询接口
++(void)requestCityWithName:(NSString *)cityname andbusStationName:(NSString *)busStationName  andCallback:(MyCallback)callback;
+//换乘接口
++(void)requestCityWithName:(NSString *)cityname andCoordinates:(NSString *)Coordinates andtransferType:(NSString *)transferType andCallback:(MyCallback)callback;
+//换乘接口
+//+(void)requestCityWithName:(NSString *)cityname andstartLatitude:(double *)starLatitude andstartLongitude:(double *)startLongitude andendLatitude:(double *)endLatitude andendLongitude:(double)endLogitude andPreference:(NSInteger *)Preference  andCallback:(MyCallback)callback;
+//周边站台接口
+//+(void)requestCityWithName:(NSString *)cityname andstartLatitude:(double *)starLatitude andstartLongitude:(double *)startLongitude andradiusDist:(int *)radiusDist andCallback:(MyCallback)callback;
 
 
 @end

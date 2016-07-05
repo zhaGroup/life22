@@ -9,6 +9,7 @@
 #import "BusRouteViewController.h"
 #import "RouteSearchViewController.h"
 #import "AllRealTimeRoute.h"
+#import "BusWebUtils.h"
 
 @interface BusRouteViewController ()
 
@@ -28,7 +29,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+        [BusWebUtils requestCityWithName:@"深圳" andBusRouteWithName:@"m282" andCallback:^(id obj) {
+        }];
+        [BusWebUtils requestCityWithName:@"苏州" andbusStationName:@"沪宁城铁园区站公交站" andCallback:^(id obj) {
+    
+        }];
+    
+//    NSString *str = @"116.461368,39.91791666666666;116.364736,39.899546666666666";
+//    
+//    NSArray *arrayStr= [str componentsSeparatedByString:@";"];
+//    for (NSString *str in arrayStr) {
+//        NSArray *arrayStr= [str componentsSeparatedByString:@","];
+//        for (NSString *str in arrayStr) {
+//            CGFloat coordinateList =  [str doubleValue];
+//            NSLog(@"%f",coordinateList);
+//        }
+//        //        NSLog(@"%@",arrayStr);
+//        
+//    }
+//    
+//    [BusWebUtils requestCityWithName:@"苏州" andCoordinates:@"116.461368,39.91791666666666;116.364736,39.899546666666666" andtransferType:@"0" andCallback:^(id obj) {
+//        
+//    }];
+//    
+//
+//    
+    
 }
 
 - (void)didReceiveMemoryWarning {
