@@ -11,6 +11,7 @@
 #import "todayWeather.h"
 #import "futherWeather.h"
 #import "WeatherCity.h"
+#import "ChenNews.h"
 @implementation netManager
 
 
@@ -61,6 +62,33 @@
         NSLog(@"%@",error);
     }];
 }
-
++(void)GetNewsWithBlock:(MycallBack)block
+{
+    NSString *path=@"http://v.juhe.cn/toutiao/index";
+    NSDictionary *params=@{@"key":@"8199660b0c56fa1666c216ff29664a98"};
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+    [manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *dataDic=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        
+        NSArray *DataArray=dataDic[@"result"][@"data"];
+        
+        NSMutableArray *mutableArray=[NSMutableArray array];
+        for (NSDictionary *dic in DataArray)
+        {
+            //
+            ChenNews *n=[[ChenNews alloc]initWithDic:dic];
+            
+            [mutableArray addObject:n];
+        }
+        block(mutableArray);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+    }];
+}
 
 @end

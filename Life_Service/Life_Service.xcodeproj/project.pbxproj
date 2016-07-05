@@ -71,6 +71,13 @@
 		853853521D25048D003872AA /* blueBtnSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 853853401D25048D003872AA /* blueBtnSmall.png */; };
 		8538535D1D2527F4003872AA /* FutureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538535B1D2527F4003872AA /* FutureCell.m */; };
 		8538535E1D2527F4003872AA /* FutureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8538535C1D2527F4003872AA /* FutureCell.xib */; };
+		8576E90F1D2BE88C00B6C8E2 /* chenNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E90A1D2BE88C00B6C8E2 /* chenNewViewController.m */; };
+		8576E9101D2BE88C00B6C8E2 /* chenNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8576E90B1D2BE88C00B6C8E2 /* chenNewViewController.xib */; };
+		8576E9111D2BE88C00B6C8E2 /* WeBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E90D1D2BE88C00B6C8E2 /* WeBViewController.m */; };
+		8576E9121D2BE88C00B6C8E2 /* WeBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8576E90E1D2BE88C00B6C8E2 /* WeBViewController.xib */; };
+		8576E9151D2BE89B00B6C8E2 /* ChenNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E9141D2BE89B00B6C8E2 /* ChenNews.m */; };
+		8576E9191D2BE8BC00B6C8E2 /* ChenNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E9171D2BE8BC00B6C8E2 /* ChenNewCell.m */; };
+		8576E91A1D2BE8BC00B6C8E2 /* ChenNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8576E9181D2BE8BC00B6C8E2 /* ChenNewCell.xib */; };
 		858F9F9D1D2BAE6D00A67C70 /* full_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 858F9F9B1D2BAE6D00A67C70 /* full_map@2x.png */; };
 		858F9F9E1D2BAE6E00A67C70 /* line_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 858F9F9C1D2BAE6D00A67C70 /* line_map@2x.png */; };
 		858F9FA91D2BB1BA00A67C70 /* tabbar_search_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 858F9FA71D2BB1BA00A67C70 /* tabbar_search_normal@2x.png */; };
@@ -185,6 +192,17 @@
 		8538535B1D2527F4003872AA /* FutureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FutureCell.m; sourceTree = "<group>"; };
 		8538535C1D2527F4003872AA /* FutureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FutureCell.xib; sourceTree = "<group>"; };
 		8560BF6B7A33709654FD5D7E /* Pods-Life_Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life_Service.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life_Service/Pods-Life_Service.release.xcconfig"; sourceTree = "<group>"; };
+		8576E9091D2BE88C00B6C8E2 /* chenNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chenNewViewController.h; sourceTree = "<group>"; };
+		8576E90A1D2BE88C00B6C8E2 /* chenNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chenNewViewController.m; sourceTree = "<group>"; };
+		8576E90B1D2BE88C00B6C8E2 /* chenNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chenNewViewController.xib; sourceTree = "<group>"; };
+		8576E90C1D2BE88C00B6C8E2 /* WeBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeBViewController.h; sourceTree = "<group>"; };
+		8576E90D1D2BE88C00B6C8E2 /* WeBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeBViewController.m; sourceTree = "<group>"; };
+		8576E90E1D2BE88C00B6C8E2 /* WeBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeBViewController.xib; sourceTree = "<group>"; };
+		8576E9131D2BE89B00B6C8E2 /* ChenNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChenNews.h; sourceTree = "<group>"; };
+		8576E9141D2BE89B00B6C8E2 /* ChenNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChenNews.m; sourceTree = "<group>"; };
+		8576E9161D2BE8BC00B6C8E2 /* ChenNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChenNewCell.h; sourceTree = "<group>"; };
+		8576E9171D2BE8BC00B6C8E2 /* ChenNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChenNewCell.m; sourceTree = "<group>"; };
+		8576E9181D2BE8BC00B6C8E2 /* ChenNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChenNewCell.xib; sourceTree = "<group>"; };
 		858F9F9B1D2BAE6D00A67C70 /* full_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full_map@2x.png"; sourceTree = "<group>"; };
 		858F9F9C1D2BAE6D00A67C70 /* line_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_map@2x.png"; sourceTree = "<group>"; };
 		858F9FA71D2BB1BA00A67C70 /* tabbar_search_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_search_normal@2x.png"; sourceTree = "<group>"; };
@@ -477,6 +495,12 @@
 		85384AB91D250371003872AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8576E9091D2BE88C00B6C8E2 /* chenNewViewController.h */,
+				8576E90A1D2BE88C00B6C8E2 /* chenNewViewController.m */,
+				8576E90B1D2BE88C00B6C8E2 /* chenNewViewController.xib */,
+				8576E90C1D2BE88C00B6C8E2 /* WeBViewController.h */,
+				8576E90D1D2BE88C00B6C8E2 /* WeBViewController.m */,
+				8576E90E1D2BE88C00B6C8E2 /* WeBViewController.xib */,
 				85384ABA1D250371003872AA /* FutherViewController.h */,
 				85384ABB1D250371003872AA /* FutherViewController.m */,
 				85384ABC1D250371003872AA /* FutherViewController.xib */,
@@ -490,6 +514,8 @@
 		85384AC01D250371003872AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8576E9131D2BE89B00B6C8E2 /* ChenNews.h */,
+				8576E9141D2BE89B00B6C8E2 /* ChenNews.m */,
 				85384AC11D250371003872AA /* futherWeather.h */,
 				85384AC21D250371003872AA /* futherWeather.m */,
 				85384AC31D250371003872AA /* todayWeather.h */,
@@ -512,6 +538,9 @@
 		85384AC81D250371003872AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8576E9161D2BE8BC00B6C8E2 /* ChenNewCell.h */,
+				8576E9171D2BE8BC00B6C8E2 /* ChenNewCell.m */,
+				8576E9181D2BE8BC00B6C8E2 /* ChenNewCell.xib */,
 				8538535A1D2527F4003872AA /* FutureCell.h */,
 				8538535B1D2527F4003872AA /* FutureCell.m */,
 				8538535C1D2527F4003872AA /* FutureCell.xib */,
@@ -663,6 +692,7 @@
 				F174A57D1D269AAD006C7A52 /* TrainViewController.xib in Resources */,
 				853853441D25048D003872AA /* account_bg@2x.png in Resources */,
 				F174A58F1D269AC6006C7A52 /* StockViewController.xib in Resources */,
+				8576E91A1D2BE8BC00B6C8E2 /* ChenNewCell.xib in Resources */,
 				52E456931D251DFD002EDFCF /* BusRouteViewController.xib in Resources */,
 				52E456811D251DC6002EDFCF /* icon_search_realtime@3x.png in Resources */,
 				F174A5941D269CCF006C7A52 /* 12306.@2x.png in Resources */,
@@ -689,6 +719,7 @@
 				52E456851D251DC6002EDFCF /* messages_toolbar_background@2x.png in Resources */,
 				8538534F1D25048D003872AA /* bg_snow.jpg in Resources */,
 				8538534C1D25048D003872AA /* bg_night_snow.jpg in Resources */,
+				8576E9121D2BE88C00B6C8E2 /* WeBViewController.xib in Resources */,
 				852D1D361D24A4B000F1F7D3 /* ContentViewController.xib in Resources */,
 				852D1D341D24A4B000F1F7D3 /* ComicBookViewController.xib in Resources */,
 				853853421D25048D003872AA /* 2.jpg in Resources */,
@@ -700,6 +731,7 @@
 				858F9FA91D2BB1BA00A67C70 /* tabbar_search_normal@2x.png in Resources */,
 				52E456841D251DC6002EDFCF /* item_cancel@2x.png in Resources */,
 				52E456821D251DC6002EDFCF /* icon_transfer_my_location@2x.png in Resources */,
+				8576E9101D2BE88C00B6C8E2 /* chenNewViewController.xib in Resources */,
 				F174A5811D269AAD006C7A52 /* cheCiModelController.xib in Resources */,
 				853853411D25048D003872AA /* 1.jpg in Resources */,
 			);
@@ -778,6 +810,7 @@
 				52E456901D251DFD002EDFCF /* AllRealTimeRoute.m in Sources */,
 				F174A57C1D269AAD006C7A52 /* TrainViewController.m in Sources */,
 				F174A58A1D269ABB006C7A52 /* zwebUtil.m in Sources */,
+				8576E9151D2BE89B00B6C8E2 /* ChenNews.m in Sources */,
 				852D1D351D24A4B000F1F7D3 /* ContentViewController.m in Sources */,
 				F174A58E1D269AC6006C7A52 /* StockViewController.m in Sources */,
 				8538535D1D2527F4003872AA /* FutureCell.m in Sources */,
@@ -790,8 +823,11 @@
 				852D1D321D24A4B000F1F7D3 /* CartoonBookTableViewController.m in Sources */,
 				85F0ED2E1D254DEF00BA6CEC /* WeatherCity.m in Sources */,
 				85384ACC1D250371003872AA /* FutherViewController.m in Sources */,
+				8576E90F1D2BE88C00B6C8E2 /* chenNewViewController.m in Sources */,
+				8576E9191D2BE8BC00B6C8E2 /* ChenNewCell.m in Sources */,
 				85384ACE1D250371003872AA /* MainViewController.m in Sources */,
 				852D1D311D24A4B000F1F7D3 /* BookCapterTableViewController.m in Sources */,
+				8576E9111D2BE88C00B6C8E2 /* WeBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

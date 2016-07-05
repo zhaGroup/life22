@@ -17,5 +17,6 @@ typedef void (^MycallBack)(id obj);
 
 +(void)GetCityFutureWeatherWithCityName:(NSString*)name andBlock:(MycallBack)block;
 
-
+//得到新闻
++(void)GetNewsWithBlock:(MycallBack)block;
 @end

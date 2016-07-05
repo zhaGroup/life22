@@ -10,7 +10,7 @@
 #import "netManager.h"
 #import "todayWeather.h"
 #import "FutherViewController.h"
-
+#import "chenNewViewController.h"
 @interface MainViewController ()
 
 
@@ -105,6 +105,12 @@
 }
 
 
+- (IBAction)toNew:(UIButton *)sender
+{
+    chenNewViewController *new=[[chenNewViewController alloc]init];
+    
+    [self.navigationController pushViewController:new animated:YES];
+}
 
 
 
